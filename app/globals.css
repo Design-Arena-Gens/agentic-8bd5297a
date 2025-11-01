@@ -1,0 +1,92 @@
+:root {
+  --bg: #0b1020;
+  --card: #121933;
+  --text: #e7eaf6;
+  --muted: #b6c0de;
+  --accent: #6aa5ff;
+  --accent-2: #8c6aff;
+  --border: #273056;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 20% -10%, #1b2558 0%, #0b1020 60%);
+}
+
+.container {
+  max-width: 880px;
+  margin: 48px auto;
+  padding: 0 20px 48px;
+}
+
+h1 {
+  margin: 8px 0 8px;
+  font-size: 40px;
+  letter-spacing: -0.02em;
+}
+
+h2 { margin: 32px 0 12px; }
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 28px;
+}
+
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+.row { display: grid; grid-template-columns: 1fr 180px 180px; gap: 12px; }
+@media (max-width: 760px) { .row { grid-template-columns: 1fr; } }
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+input, button, select, textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #0f1633;
+  color: var(--text);
+}
+
+button.primary {
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button.secondary { cursor: pointer; }
+
+.actions { display: flex; gap: 10px; align-items: center; }
+
+.results { margin-top: 28px; }
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+}
+.table th, .table td { border-bottom: 1px solid var(--border); padding: 12px; vertical-align: top; }
+.table th { text-align: left; color: var(--muted); font-weight: 600; }
+.badge { display: inline-block; padding: 4px 10px; border-radius: 999px; background: #1a2247; border: 1px solid var(--border); }
+
+.downloads { margin-top: 14px; display: flex; gap: 10px; }
